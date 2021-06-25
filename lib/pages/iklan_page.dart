@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:submission_flutter_pemua/bloc/logout_bloc.dart';
 import 'package:submission_flutter_pemua/bloc/produk_bloc.dart';
 import 'package:submission_flutter_pemua/model/produk.dart';
 import 'package:submission_flutter_pemua/pages/detail_iklan.dart';

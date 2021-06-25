@@ -26,9 +26,9 @@ class ProdukBloc {
     String apiUrl = ApiUrl.createProduk;
 
     var body = {
-      "judul_iklan": produk.judulIklan,
-      "dana_need": produk.danaNeed,
-      "dana_collected": produk.danaCollected,
+      "judulIklan": produk.judulIklan,
+      "danaNeed": produk.danaNeed.toString(),
+      "danaCollected": produk.danaCollected.toString(),
       "url": produk.url,
       "cerita": produk.cerita,
     };
@@ -44,11 +44,11 @@ class ProdukBloc {
     String apiUrl = ApiUrl.updateProduk(produk.id);
 
     var body = {
-      "judul_iklan": produk.judulIklan,
-      "dana_need": produk.danaNeed,
-      "dana_collected": produk.danaCollected,
+      "judulIklan": produk.judulIklan,
+      "danaNeed": produk.danaNeed.toString(),
+      "danaCollected": produk.danaCollected.toString(),
+      "url": produk.url,
       "cerita": produk.cerita,
-      // "url": produk.url
     };
 
     print("Body : $body");

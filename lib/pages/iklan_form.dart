@@ -20,9 +20,9 @@ class _IklanFormState extends State<IklanForm> {
   String tombolSubmit = "SIMPAN";
 
   final _judulIklanTextboxController = TextEditingController();
-  final _urlTextboxController = TextEditingController();
   final _danaNeedTextboxController = TextEditingController();
   final _danaCollectedTextboxController = TextEditingController();
+  final _urlTextboxController = TextEditingController();
   final _ceritaTextboxController = TextEditingController();
 
   @override
@@ -38,10 +38,10 @@ class _IklanFormState extends State<IklanForm> {
         judul = "UBAH PRODUK";
         tombolSubmit = "UBAH";
         _judulIklanTextboxController.text = widget.produk.judulIklan;
-        _urlTextboxController.text = widget.produk.url;
         _danaNeedTextboxController.text = widget.produk.danaNeed.toString();
         _danaCollectedTextboxController.text =
             widget.produk.danaCollected.toString();
+        _urlTextboxController.text = widget.produk.url;
         _ceritaTextboxController.text = widget.produk.cerita;
       });
     } else {
@@ -63,9 +63,9 @@ class _IklanFormState extends State<IklanForm> {
               child: Column(
                 children: [
                   _judulIklanTextField(),
-                  _urlTextField(),
                   _danaNeedTextField(),
                   _danaCollectedTextField(),
+                  _urlTextField(),
                   _ceritaTextField(),
                   _buttonSubmit()
                 ],
@@ -206,6 +206,7 @@ class _IklanFormState extends State<IklanForm> {
     updateProduk.danaNeed = int.parse(_danaNeedTextboxController.text);
     updateProduk.danaCollected =
         int.parse(_danaCollectedTextboxController.text);
+    updateProduk.url = _urlTextboxController.text;
     updateProduk.cerita = _ceritaTextboxController.text;
     ProdukBloc.updateProduk(produk: updateProduk).then((value) {
       Navigator.of(context).push(new MaterialPageRoute(

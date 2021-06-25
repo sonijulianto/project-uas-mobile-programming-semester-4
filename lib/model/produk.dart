@@ -15,10 +15,10 @@ class Produk {
   factory Produk.fromJson(Map<String, dynamic> obj) {
     return Produk(
         id: obj['id'],
-        judulIklan: obj['judul_iklan'],
-        danaNeed: obj['dana_need'],
-        danaCollected: obj['dana_collected'],
-        cerita: obj['cerita'],
-        url: obj['url']);
+        judulIklan: obj['judulIklan'],
+        danaNeed: obj['danaNeed'],
+        danaCollected: obj['danaCollected'],
+        url: obj['url'],
+        cerita: obj['cerita']);
   }
 }

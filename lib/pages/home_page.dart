@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:submission_flutter_pemua/bloc/logout_bloc.dart';
 import 'package:submission_flutter_pemua/content.dart';
-import 'package:submission_flutter_pemua/model/donations.dart';
 import 'package:submission_flutter_pemua/model/donasi.dart';
 import 'package:submission_flutter_pemua/pages/iklan_form.dart';
 import 'package:submission_flutter_pemua/pages/sign_in_page.dart';
 import 'package:submission_flutter_pemua/theme.dart';
-import 'package:submission_flutter_pemua/widget/donasi_populer_card.dart';
 import 'package:submission_flutter_pemua/widget/kategori_donasi_card.dart';
 
 class HomePage extends StatelessWidget {

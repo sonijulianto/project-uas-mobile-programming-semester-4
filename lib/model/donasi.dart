@@ -5,5 +5,10 @@ class Donasi {
   String kategori;
   bool isPopular;
 
-  Donasi({this.id,this.name, this.imageUrl, this.kategori, this.isPopular = false});
+  Donasi(
+      {this.id,
+      this.name,
+      this.imageUrl,
+      this.kategori,
+      this.isPopular = false});
 }

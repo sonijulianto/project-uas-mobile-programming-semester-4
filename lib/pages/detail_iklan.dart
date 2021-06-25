@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:submission_flutter_pemua/bloc/produk_bloc.dart';
 import 'package:submission_flutter_pemua/content.dart';
 import 'package:submission_flutter_pemua/model/produk.dart';
-import 'package:submission_flutter_pemua/pages/home_page.dart';
 import 'package:submission_flutter_pemua/pages/iklan_form.dart';
-import 'package:submission_flutter_pemua/pages/iklan_page.dart';
 import 'package:submission_flutter_pemua/theme.dart';
 import 'package:submission_flutter_pemua/widget/warning_dialog.dart';
 
@@ -44,21 +42,6 @@ class _ProdukDetailState extends State<ProdukDetail> {
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            // ignore: missing_required_param
-                            builder: (context) => HomePage()));
-                  },
-                  child: Image.asset(
-                    'assets/images/btn_back.png',
-                    width: 40,
-                  ),
-                ),
-              ],
             ),
           ),
           ListView(
@@ -157,7 +140,7 @@ class _ProdukDetailState extends State<ProdukDetail> {
                           )));
             }),
 //Tombol Hapus
-        FlatButton(child: Icon(Icons.delete), onPressed: () => confirmHapus()),
+        TextButton(child: Icon(Icons.delete), onPressed: () => confirmHapus()),
       ],
     );
   }
